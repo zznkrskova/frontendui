@@ -51,17 +51,28 @@ export const Link = ({ item, LinkURI: LinkURI_ = LinkURI, action="view", childre
     // return <a>{children || item?.fullname || item?.name || item?.id || "Nevim"}</a>
 }
 
+// Komponenta pro vytvoření odkazu na detail události (Event)
 const EventLink = ({ item, action="view", children, ...props}) => (
+    // ProxyLink vytvoří odkaz na stránku události
+    // action určuje akci (např. view, edit),
+    // item.id je id konkrétní události.
     <ProxyLink to={"/event/EventGQLModel/${action}/${item?.id}"} {...props}>
         {children || item?.fullname || item?.name || item?.id || "Nevim"}
     </ProxyLink>
 )
 
+// Komponenta pro vytvoření odkazu na detail uživatele (User)
+// logika stejná jako u EventLink
 const UserLink = ({ item, action="view", children, ...props}) => (
-    <ProxyLink to={"/user/UserGQLModel/${action}/${item?.id}"} {...props}>
+    <ProxyLink to={"/ug/UserGQLModel/${action}/${item?.id}"} {...props}>
         {children || item?.fullname || item?.name || item?.id || "Nevim"}
     </ProxyLink>
 )
 
+// Registrace komponenty, která se bude používat pro odkazy na EventGQLModel
+// Kdykoliv aplikace potřebuje vytvořit odkaz na EventGQLModel,
+// použije tuto komponentu.
 registerLink('EventGQLModel', Link)
+
+// Registrace komponenty pro odkazy na UserGQLModel
 registerLink('UserGQLModel', UserLink)

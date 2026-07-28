@@ -1,7 +1,7 @@
 {
   "name": "@smerovacdusan/app_event",
   "private": false,
-  "version": "0.5.3",
+  "version": "0.5.5",
   "type": "module",
   "files": [
     "dist",

@@ -217,12 +217,28 @@ export const PageCatch = ({ children }) => {
         <>
         <SimpleCardCapsule title={"types"}>
         {types.map((t, i) => {
+
+            // Určíme cílovou URL podle typu objektu
             const target = t === "EventGQLModel"
+                
+                // Události mají vlastní speciální cestu
                 ? `/event/${t}/list/`
+
+                // Ostatní typy používají obecnou URL
                 : `${GenericURIRoot}/${t}/list`;
             return (
+
+                // Každý prvek seznamu musí mít unikátní klíč.
+                // Kombinujeme název typu a index,
+                // aby nevznikaly duplicity
                 <div key={t+":" + i}>
                     {/* <button className="btn btn-outline-secondary form-control"> */}
+
+                    {/*
+                        ProxyLink vytvoří navigační odkaz.
+                        Po kliknutí se uživatel dostane
+                        na seznam daného typu objektu.
+                    */}
                     <ProxyLink to={target} >{t}</ProxyLink>
                     {/* </button> */}
                 </div>

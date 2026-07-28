@@ -32,10 +32,17 @@ const Routes = [
         element: <AppLayout />,
         children: [
             {
+                // Pokud uživatel otevře pouze /event,
+                // automaticky ho přesměrujeme na seznam událostí
                 path: "/event",
+
+                // Navigate provede přesměrování
                 element: (<Navigate to="/event/EventGQLModel/list/" replace />),
             },
             {
+
+                // Stejné přesměrování jako výše,
+                // ale pro variantu s lomítkem na konci (/event/)
                 path: "/event/",
                 element: (<Navigate to="/event/EventGQLModel/list/" replace />),
             },

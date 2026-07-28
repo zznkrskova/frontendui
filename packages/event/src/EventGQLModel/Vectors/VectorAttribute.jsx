@@ -44,10 +44,26 @@ export const VectorAttribute = ({ attribute_name, item }) => {
 export const MediumCardVectors = ({ item }) => {
     return (
         <CardCapsule item={item} title="Vektorové atributy">
+
+            {/* Projdeme všechny atributy objektu item.
+                Object.entries() převede objekt na pole dvojic:
+                [
+                   ["název_atributu", hodnota],
+                   ["jiný_atribut", hodnota]
+                ]
+            */}
             {Object.entries(item).map(([attribute_name, attribute_value]) => {
+
+                // Kontrolujeme, jestli je hodnota atributu pole.
+                // Pole zde představuje vektorový atribut
                 if (Array.isArray(attribute_value)) {
+
+                    // Pokud atribut obsahuje pole,
+                    // zobrazíme komponentu pro jeho vykreslení
                     return <VectorAttribute key={attribute_name} attribute_name={attribute_name} item={item} />
                 } else {
+                    // Pokud atribut není pole,
+                    // ignorujeme ho a nic nevykreslíme
                     return null
                 }
             })}

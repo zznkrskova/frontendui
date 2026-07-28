@@ -40,7 +40,17 @@ import { URIRoot } from "../../uriroot"
  */
 export const EventGQLModelRouterSegments = [
     {
+        // Výchozí cesta pro tento modul
         path: URIRoot,
+
+        // Pokud uživatel otevře pouze základní URL modulu,
+        // automaticky ho přesměrujeme na seznam událostí.
+        //
+        // Například:
+        // /event/EventGQLModel/
+        //
+        // se přesměruje na:
+        // /event/EventGQLModel/list/
         element: (<Navigate to={VectorItemsURI} replace />),
     },
     {

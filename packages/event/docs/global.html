@@ -104,7 +104,11 @@
 
 
 <div class="description">
-    A specialized card component that displays an `TemplateLink` as its title and encapsulates additional content.This component extends the `CardCapsule` component by using a combination of a `PersonFill` icon and an `TemplateLink` component in the card's header. The `children` prop is used to render any content inside the card body. It is designed for use with entities represented by the `template` object.
+    A specialized card component that displays an `TemplateLink` as its title and encapsulates additional content.
+
+This component extends the `CardCapsule` component by using a combination of a `PersonFill` icon and 
+an `TemplateLink` component in the card's header. The `children` prop is used to render any content 
+inside the card body. It is designed for use with entities represented by the `template` object.
 </div>
 
 
@@ -159,7 +163,15 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>// Example usage:import { TemplateCardCapsule } from './TemplateCardCapsule';import { Button } from 'react-bootstrap';const templateEntity = { id: 123, name: "Example Entity" };&lt;TemplateCardCapsule template={templateEntity}>  &lt;Button variant="primary">Click Me&lt;/Button>&lt;/TemplateCardCapsule></code></pre>
+    <pre class="prettyprint"><code>// Example usage:
+import { TemplateCardCapsule } from './TemplateCardCapsule';
+import { Button } from 'react-bootstrap';
+
+const templateEntity = { id: 123, name: "Example Entity" };
+
+&lt;TemplateCardCapsule template={templateEntity}>
+  &lt;Button variant="primary">Click Me&lt;/Button>
+&lt;/TemplateCardCapsule></code></pre>
 
 
 
@@ -171,7 +183,12 @@
 
 
 <div class="description">
-    TemplateChildren ComponentA utility React component that wraps its children with the `ChildWrapper` component, passing down an `template` entity along with other props to all child elements.This component is useful for injecting a common `template` entity into multiple children while preserving their existing functionality.
+    TemplateChildren Component
+
+A utility React component that wraps its children with the `ChildWrapper` component, 
+passing down an `template` entity along with other props to all child elements.
+This component is useful for injecting a common `template` entity into multiple children 
+while preserving their existing functionality.
 </div>
 
 
@@ -226,7 +243,15 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>// Example usage:const templateEntity = { id: 1, message: "No data available" };&lt;TemplateChildren template={templateEntity}>    &lt;CustomMessage />    &lt;CustomIcon />&lt;/TemplateChildren>// Result: Both &lt;CustomMessage /> and &lt;CustomIcon /> receive the 'template' prop with the specified entity.</code></pre>
+    <pre class="prettyprint"><code>// Example usage:
+const templateEntity = { id: 1, message: "No data available" };
+
+&lt;TemplateChildren template={templateEntity}>
+    &lt;CustomMessage />
+    &lt;CustomIcon />
+&lt;/TemplateChildren>
+
+// Result: Both &lt;CustomMessage /> and &lt;CustomIcon /> receive the 'template' prop with the specified entity.</code></pre>
 
 
 
@@ -238,7 +263,17 @@
 
 
 <div class="description">
-    Wrapper nad `BaseCreateBody` (alias importu `CreateBody` z Base/Mutations/Create),který je odvozený z obecných `General*` komponent.`CreateBody` typicky reprezentuje “page-level” create workflow (ne jen tlačítko + modal):- vykreslí create formulář pomocí `DefaultContent`- zajistí uložení přes `mutationAsyncAction` (dle Base/General implementace)- po úspěchu může navigovat na detail vytvořené entity přes `readItemURI` (pokud Base/General takto funguje)Wrapper pouze nastavuje defaulty a přeposílá props do `BaseCreateBody`.Vizualizuje <DefaultContent />, sbira zmeny a umoznuje volani backendu pro ulozeni dat
+    Wrapper nad `BaseCreateBody` (alias importu `CreateBody` z Base/Mutations/Create),
+který je odvozený z obecných `General*` komponent.
+
+`CreateBody` typicky reprezentuje “page-level” create workflow (ne jen tlačítko + modal):
+- vykreslí create formulář pomocí `DefaultContent`
+- zajistí uložení přes `mutationAsyncAction` (dle Base/General implementace)
+- po úspěchu může navigovat na detail vytvořené entity přes `readItemURI` (pokud Base/General takto funguje)
+
+Wrapper pouze nastavuje defaulty a přeposílá props do `BaseCreateBody`.
+
+Vizualizuje <DefaultContent />, sbira zmeny a umoznuje volani backendu pro ulozeni dat
 </div>
 
 
@@ -276,7 +311,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Mutations_Create.jsx.html">Mutations/Create.jsx</a>, <a href="Mutations_Create.jsx.html#line199">line 199</a>
+        <a href="Mutations_Create.jsx.html">Mutations/Create.jsx</a>, <a href="Mutations_Create.jsx.html#line214">line 214</a>
     </li></ul></dd>
     
 
@@ -300,7 +335,17 @@
 
 
 <div class="description">
-    Wrapper nad `BaseCreateButton` (alias importu `CreateButton` z Base/Mutations/Create),který je odvozený z obecných `General*` komponent.Účel wrapperu:- nastaví výchozí oprávnění (RBAC) přes `permissions` (`oneOfRoles`, `mode`)- nastaví výchozí mutaci pro vytvoření entity (`mutationAsyncAction`)- umožní vyměnit dialog a obsah formuláře (`CreateDialog`, `DefaultContent`)- určí kam se má po úspěšném vytvoření navigovat (`readItemURI`)- předá výchozí `item` pro nový záznamZobrazí tlačítko a po jeho stisku otevře dialog, při volbě OK dochází k odeslání mutace na backend
+    Wrapper nad `BaseCreateButton` (alias importu `CreateButton` z Base/Mutations/Create),
+který je odvozený z obecných `General*` komponent.
+
+Účel wrapperu:
+- nastaví výchozí oprávnění (RBAC) přes `permissions` (`oneOfRoles`, `mode`)
+- nastaví výchozí mutaci pro vytvoření entity (`mutationAsyncAction`)
+- umožní vyměnit dialog a obsah formuláře (`CreateDialog`, `DefaultContent`)
+- určí kam se má po úspěšném vytvoření navigovat (`readItemURI`)
+- předá výchozí `item` pro nový záznam
+
+Zobrazí tlačítko a po jeho stisku otevře dialog, při volbě OK dochází k odeslání mutace na backend
 </div>
 
 
@@ -338,7 +383,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Mutations_Create.jsx.html">Mutations/Create.jsx</a>, <a href="Mutations_Create.jsx.html#line96">line 96</a>
+        <a href="Mutations_Create.jsx.html">Mutations/Create.jsx</a>, <a href="Mutations_Create.jsx.html#line109">line 109</a>
     </li></ul></dd>
     
 
@@ -362,7 +407,16 @@
 
 
 <div class="description">
-    Wrapper nad `BaseCreateDialog` (alias importu `CreateDialog` z Base/Mutations/Create),který je odvozený z obecných `General*` komponent.Účel wrapperu:- nastaví výchozí title, obsah formuláře a výchozí draft (`item`)- předá `readItemURI` pro případnou navigaci po vytvoření (dle implementace Base/General)- umožní přepsat `mutationAsyncAction` (pokud BaseCreateDialog mutaci používá)Mutaci provadi až tlačítko (`BaseCreateButton`) Dialog jen zobrazuje a zabezpecuje sber data dialog je jen “formulář”.
+    Wrapper nad `BaseCreateDialog` (alias importu `CreateDialog` z Base/Mutations/Create),
+který je odvozený z obecných `General*` komponent.
+
+Účel wrapperu:
+- nastaví výchozí title, obsah formuláře a výchozí draft (`item`)
+- předá `readItemURI` pro případnou navigaci po vytvoření (dle implementace Base/General)
+- umožní přepsat `mutationAsyncAction` (pokud BaseCreateDialog mutaci používá)
+
+Mutaci provadi až tlačítko (`BaseCreateButton`) Dialog jen zobrazuje a zabezpecuje sber dat
+a dialog je jen “formulář”.
 </div>
 
 
@@ -400,7 +454,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Mutations_Create.jsx.html">Mutations/Create.jsx</a>, <a href="Mutations_Create.jsx.html#line152">line 152</a>
+        <a href="Mutations_Create.jsx.html">Mutations/Create.jsx</a>, <a href="Mutations_Create.jsx.html#line165">line 165</a>
     </li></ul></dd>
     
 
@@ -424,7 +478,15 @@
 
 
 <div class="description">
-    Wrapper nad `BaseCreateLink` (alias importu `CreateLink` z Base/Mutations/Create),který je odvozený z obecných `General*` komponent.Účel wrapperu:- nastaví výchozí `uriPattern` pro create route- aplikuje výchozí RBAC nastavení přes `permissions` (např. `oneOfRoles`, `mode`)- všechny ostatní props pouze přeposílá do Base komponentyVizuálně vyrenderuje link pro kliknutí
+    Wrapper nad `BaseCreateLink` (alias importu `CreateLink` z Base/Mutations/Create),
+který je odvozený z obecných `General*` komponent.
+
+Účel wrapperu:
+- nastaví výchozí `uriPattern` pro create route
+- aplikuje výchozí RBAC nastavení přes `permissions` (např. `oneOfRoles`, `mode`)
+- všechny ostatní props pouze přeposílá do Base komponenty
+
+Vizuálně vyrenderuje link pro kliknutí
 </div>
 
 
@@ -462,7 +524,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Mutations_Create.jsx.html">Mutations/Create.jsx</a>, <a href="Mutations_Create.jsx.html#line51">line 51</a>
+        <a href="Mutations_Create.jsx.html">Mutations/Create.jsx</a>, <a href="Mutations_Create.jsx.html#line64">line 64</a>
     </li></ul></dd>
     
 
@@ -486,7 +548,10 @@
 
 
 <div class="description">
-    “Page-level” delete workflow (mazání na celé stránce / v těle stránky).Wrapper nad `BaseDeleteBody`. Dodává výchozí `DefaultContent`, `mutationAsyncAction`a `vectorItemsURI` a aplikuje RBAC přes `permissions`.
+    “Page-level” delete workflow (mazání na celé stránce / v těle stránky).
+
+Wrapper nad `BaseDeleteBody`. Dodává výchozí `DefaultContent`, `mutationAsyncAction`
+a `vectorItemsURI` a aplikuje RBAC přes `permissions`.
 </div>
 
 
@@ -548,7 +613,15 @@
 
 
 <div class="description">
-    Tlačítko pro smazání entity (obvykle otevře confirm dialog a spustí delete mutaci).Wrapper nad `BaseDeleteButton`. Dodává výchozí `DefaultContent`, `mutationAsyncAction`a `vectorItemsURI` (kam se naviguje po úspěšném smazání, pokud není použit `onOk`).Chování navigace / callback:- Pokud je definované `onOk`, použije se pro “feedback”, že mazání proběhlo (tj. uživatel si  rozhodne, co dál).- Pokud `onOk` definované není, Base implementace typicky naviguje na `vectorItemsURI`.
+    Tlačítko pro smazání entity (obvykle otevře confirm dialog a spustí delete mutaci).
+
+Wrapper nad `BaseDeleteButton`. Dodává výchozí `DefaultContent`, `mutationAsyncAction`
+a `vectorItemsURI` (kam se naviguje po úspěšném smazání, pokud není použit `onOk`).
+
+Chování navigace / callback:
+- Pokud je definované `onOk`, použije se pro “feedback”, že mazání proběhlo (tj. uživatel si
+  rozhodne, co dál).
+- Pokud `onOk` definované není, Base implementace typicky naviguje na `vectorItemsURI`.
 </div>
 
 
@@ -610,7 +683,10 @@
 
 
 <div class="description">
-    Confirm dialog pro smazání entity.Wrapper nad `BaseDeleteDialog`. Dodává výchozí `DefaultContent` (read-only zobrazení entity),`mutationAsyncAction` a `vectorItemsURI` pro návrat po úspěchu (dle Base/General implementace).
+    Confirm dialog pro smazání entity.
+
+Wrapper nad `BaseDeleteDialog`. Dodává výchozí `DefaultContent` (read-only zobrazení entity),
+`mutationAsyncAction` a `vectorItemsURI` pro návrat po úspěchu (dle Base/General implementace).
 </div>
 
 
@@ -672,7 +748,10 @@
 
 
 <div class="description">
-    Link na delete route pro konkrétní entitu.Wrapper nad `BaseDeleteLink`. Nastavuje výchozí `uriPattern` pro delete route a aplikuje RBACpřes `permissions`. Ostatní props přeposílá do Base komponenty.
+    Link na delete route pro konkrétní entitu.
+
+Wrapper nad `BaseDeleteLink`. Nastavuje výchozí `uriPattern` pro delete route a aplikuje RBAC
+přes `permissions`. Ostatní props přeposílá do Base komponenty.
 </div>
 
 
@@ -734,7 +813,17 @@
 
 
 <div class="description">
-    Definice segmentů rout pro Template stránky.Každý objekt v tomto poli popisuje jednu trasu (route) v aplikaci: - `path`: Stringová URL s parametrem `:id`, která identifikuje konkrétní instanci template entity. - `element`: React komponenta, která se má renderovat při shodě s cestou.Pokud komponenta stránky podporuje children jako render funkci,všechny children předané přes router budou dostávat objekt:  - `template` — načtená entita podle `:id`  - `onChange` — callback pro změnu hodnoty pole  - `onBlur` — callback pro blur event (například při opuštění pole)
+    Definice segmentů rout pro Template stránky.
+
+Každý objekt v tomto poli popisuje jednu trasu (route) v aplikaci:
+ - `path`: Stringová URL s parametrem `:id`, která identifikuje konkrétní instanci template entity.
+ - `element`: React komponenta, která se má renderovat při shodě s cestou.
+
+Pokud komponenta stránky podporuje children jako render funkci,
+všechny children předané přes router budou dostávat objekt:
+  - `template` — načtená entita podle `:id`
+  - `onChange` — callback pro změnu hodnoty pole
+  - `onBlur` — callback pro blur event (například při opuštění pole)
 </div>
 
 
@@ -799,7 +888,17 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>// Tato route reaguje na URL jako "/template/123"{  path: "/template/:id",  element: &lt;TemplatePage />}// Editační route: "/template/edit/123"{  path: "/template/edit/:id",  element: &lt;TemplateEditPage />}</code></pre>
+    <pre class="prettyprint"><code>// Tato route reaguje na URL jako "/template/123"
+{
+  path: "/template/:id",
+  element: &lt;TemplatePage />
+}
+
+// Editační route: "/template/edit/123"
+{
+  path: "/template/edit/:id",
+  element: &lt;TemplateEditPage />
+}</code></pre>
 
 
 
@@ -811,7 +910,11 @@
 
 
 <div class="description">
-    A large card component for displaying detailed content and layout for an template entity.This component wraps an `TemplateCardCapsule` with a flexible layout that includes multiplecolumns. It uses a `Row` layout with a `LeftColumn` for displaying an `TemplateMediumCard`and a `MiddleColumn` for rendering additional children.
+    A large card component for displaying detailed content and layout for an template entity.
+
+This component wraps an `TemplateCardCapsule` with a flexible layout that includes multiple
+columns. It uses a `Row` layout with a `LeftColumn` for displaying an `TemplateMediumCard`
+and a `MiddleColumn` for rendering additional children.
 </div>
 
 
@@ -866,7 +969,12 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>// Example usage:const templateEntity = { id: 123, name: "Sample Entity" };&lt;TemplateLargeCard template={templateEntity}>  &lt;p>Additional content for the middle column.&lt;/p>&lt;/TemplateLargeCard></code></pre>
+    <pre class="prettyprint"><code>// Example usage:
+const templateEntity = { id: 123, name: "Sample Entity" };
+
+&lt;TemplateLargeCard template={templateEntity}>
+  &lt;p>Additional content for the middle column.&lt;/p>
+&lt;/TemplateLargeCard></code></pre>
 
 
 
@@ -878,7 +986,14 @@
 
 
 <div class="description">
-    TemplateLiveEdit ComponentInteraktivní React komponenta pro live editaci entity `template` s podporou optimistického fetchování a debounce delaye.- Používá `useAsyncAction` k načítání a update entit (např. GraphQL mutation).- Pokud se hodnota pole změní, spustí se update po krátkém zpoždění (`delayer`) — uživatelské změny nejsou ihned posílány, ale až po pauze.- Zobrazuje loading a error stav pomocí komponent `LoadingSpinner` a `ErrorHandler`.- Předává editované hodnoty do komponenty `TemplateMediumEditableContent`, která zajišťuje zobrazení a editaci jednotlivých polí šablony (`template`).
+    TemplateLiveEdit Component
+
+Interaktivní React komponenta pro live editaci entity `template` s podporou optimistického fetchování a debounce delaye.
+
+- Používá `useAsyncAction` k načítání a update entit (např. GraphQL mutation).
+- Pokud se hodnota pole změní, spustí se update po krátkém zpoždění (`delayer`) — uživatelské změny nejsou ihned posílány, ale až po pauze.
+- Zobrazuje loading a error stav pomocí komponent `LoadingSpinner` a `ErrorHandler`.
+- Předává editované hodnoty do komponenty `TemplateMediumEditableContent`, která zajišťuje zobrazení a editaci jednotlivých polí šablony (`template`).
 </div>
 
 
@@ -933,9 +1048,13 @@
 
     <h5>Examples</h5>
     
-    <pre class="prettyprint"><code>// Standardní použití&lt;TemplateLiveEdit template={templateEntity} /></code></pre>
+    <pre class="prettyprint"><code>// Standardní použití
+&lt;TemplateLiveEdit template={templateEntity} /></code></pre>
 
-    <pre class="prettyprint"><code>// S vlastním asyncAction a doplňkovým obsahem&lt;TemplateLiveEdit template={templateEntity} asyncAction={myUpdateAction}>  &lt;div>Extra obsah nebo poznámka&lt;/div>&lt;/TemplateLiveEdit></code></pre>
+    <pre class="prettyprint"><code>// S vlastním asyncAction a doplňkovým obsahem
+&lt;TemplateLiveEdit template={templateEntity} asyncAction={myUpdateAction}>
+  &lt;div>Extra obsah nebo poznámka&lt;/div>
+&lt;/TemplateLiveEdit></code></pre>
 
 
 
@@ -947,7 +1066,12 @@
 
 
 <div class="description">
-    A card component that displays detailed content for an template entity.This component combines `TemplateCardCapsule` and `TemplateMediumContent` to create a card layoutwith a title and medium-level content. The title includes a `PersonFill` icon and a link tothe template entity's details, while the body displays serialized details of the entity alongwith any additional children passed to the component.
+    A card component that displays detailed content for an template entity.
+
+This component combines `TemplateCardCapsule` and `TemplateMediumContent` to create a card layout
+with a title and medium-level content. The title includes a `PersonFill` icon and a link to
+the template entity's details, while the body displays serialized details of the entity along
+with any additional children passed to the component.
 </div>
 
 
@@ -1002,7 +1126,12 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>// Example usage:const templateEntity = { id: 123, name: "Sample Entity" };&lt;TemplateMediumCard template={templateEntity}>  &lt;p>Additional details or actions for the entity.&lt;/p>&lt;/TemplateMediumCard></code></pre>
+    <pre class="prettyprint"><code>// Example usage:
+const templateEntity = { id: 123, name: "Sample Entity" };
+
+&lt;TemplateMediumCard template={templateEntity}>
+  &lt;p>Additional details or actions for the entity.&lt;/p>
+&lt;/TemplateMediumCard></code></pre>
 
 
 
@@ -1014,7 +1143,10 @@
 
 
 <div class="description">
-    A component that displays medium-level content for an template entity.This component renders a label "TemplateMediumContent" followed by a serialized representation of the `template` objectand any additional child content. It is designed to handle and display information about an template entity object.
+    A component that displays medium-level content for an template entity.
+
+This component renders a label "TemplateMediumContent" followed by a serialized representation of the `template` object
+and any additional child content. It is designed to handle and display information about an template entity object.
 </div>
 
 
@@ -1052,7 +1184,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Components_MediumEditableContent.jsx.html">Components/MediumEditableContent.jsx</a>, <a href="Components_MediumEditableContent.jsx.html#line20">line 20</a>
+        <a href="Components_MediumEditableContent.jsx.html">Components/MediumEditableContent.jsx</a>, <a href="Components_MediumEditableContent.jsx.html#line26">line 26</a>
     </li></ul></dd>
     
 
@@ -1067,6 +1199,16 @@
 
 
 
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// Example usage:
+const templateEntity = { id: 123, name: "Sample Entity" };
+
+&lt;TemplateMediumContent template={templateEntity}>
+  &lt;p>Additional information about the entity.&lt;/p>
+&lt;/TemplateMediumContent></code></pre>
+
+
 
         
             
@@ -1076,7 +1218,13 @@
 
 
 <div class="description">
-    Renders the navigation bar for an Template page.This component uses a custom hook, `useHash()`, to determine the current hashand highlights the active segment. It displays a navigation bar (using MyNavbar)with several segments (e.g. "history", "roles", "graph"), each rendered as a TitleNavButton. The segments are hardcoded in this component and only rendered if an `template` object is provided.
+    Renders the navigation bar for an Template page.
+
+This component uses a custom hook, `useHash()`, to determine the current hash
+and highlights the active segment. It displays a navigation bar (using MyNavbar)
+with several segments (e.g. "history", "roles", "graph"), each rendered as a 
+TitleNavButton. The segments are hardcoded in this component and only rendered 
+if an `template` object is provided.
 </div>
 
 
@@ -1131,7 +1279,9 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>// Example usage:const template = { id: 123, ... };&lt;TemplatePageNavbar template={template} onSearchChange={handleSearchChange} /></code></pre>
+    <pre class="prettyprint"><code>// Example usage:
+const template = { id: 123, ... };
+&lt;TemplatePageNavbar template={template} onSearchChange={handleSearchChange} /></code></pre>
 
 
 
@@ -1143,7 +1293,17 @@
 
 
 <div class="description">
-    Base wrapper pro stránky pracující s jedním entity itemem podle `:id` z routy.Komponenta:- načte `id` z URL přes `useParams()`- sestaví minimální `item` objekt `{ id }`- poskytne jej přes `AsyncActionProvider`, který zajistí načtení entity pomocí `queryAsyncAction`- vloží do stránky navbar přes `PlaceChild Component={PageNavbar}`- vyrenderuje `children` uvnitř provideru (tj. až v kontextu načtené entity)Typické použití je jako obálka routy typu `/.../:id`, kde vnořené komponenty(detail, editace, akce) používají kontext z `AsyncActionProvider`.
+    Base wrapper pro stránky pracující s jedním entity itemem podle `:id` z routy.
+
+Komponenta:
+- načte `id` z URL přes `useParams()`
+- sestaví minimální `item` objekt `{ id }`
+- poskytne jej přes `AsyncActionProvider`, který zajistí načtení entity pomocí `queryAsyncAction`
+- vloží do stránky navbar přes `PlaceChild Component={PageNavbar}`
+- vyrenderuje `children` uvnitř provideru (tj. až v kontextu načtené entity)
+
+Typické použití je jako obálka routy typu `/.../:id`, kde vnořené komponenty
+(detail, editace, akce) používají kontext z `AsyncActionProvider`.
 </div>
 
 
@@ -1205,7 +1365,15 @@
 
 
 <div class="description">
-    Základní obálka pro „read“ stránku entity podle `:id` z routy.Využívá `PageItemBase`, který zajistí:- získání `id` z URL (`useParams`)- načtení entity přes `AsyncActionProvider` pomocí `queryAsyncAction`- vložení navigace (`PageNavbar`)Uvnitř provideru vykreslí `ReadWithComponent`, který si vezme načtený `item`z `useGQLEntityContext()` a zobrazí ho v zadané komponentě (defaultně `LargeCard`).
+    Základní obálka pro „read“ stránku entity podle `:id` z routy.
+
+Využívá `PageItemBase`, který zajistí:
+- získání `id` z URL (`useParams`)
+- načtení entity přes `AsyncActionProvider` pomocí `queryAsyncAction`
+- vložení navigace (`PageNavbar`)
+
+Uvnitř provideru vykreslí `ReadWithComponent`, který si vezme načtený `item`
+z `useGQLEntityContext()` a zobrazí ho v zadané komponentě (defaultně `LargeCard`).
 </div>
 
 
@@ -1267,7 +1435,10 @@
 
 
 <div class="description">
-    An async action for executing a GraphQL query to read  entities.This action is created using `createAsyncGraphQLAction` with a predefined `QueryRead` query.It can be dispatched with query variables to fetch data related to  entities from the GraphQL API.
+    An async action for executing a GraphQL query to read  entities.
+
+This action is created using `createAsyncGraphQLAction` with a predefined `QueryRead` query.
+It can be dispatched with query variables to fetch data related to  entities from the GraphQL API.
 </div>
 
 
@@ -1332,7 +1503,16 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>// Example usage:const queryVariables = { id: "12345" };dispatch(ReadAsyncAction(queryVariables))  .then((result) => {    console.log("Fetched data:", result);  })  .catch((error) => {    console.error("Error fetching data:", error);  });</code></pre>
+    <pre class="prettyprint"><code>// Example usage:
+const queryVariables = { id: "12345" };
+
+dispatch(ReadAsyncAction(queryVariables))
+  .then((result) => {
+    console.log("Fetched data:", result);
+  })
+  .catch((error) => {
+    console.error("Error fetching data:", error);
+  });</code></pre>
 
 
 
@@ -1344,7 +1524,11 @@
 
 
 <div class="description">
-    A component for displaying the `scalar` attribute of an template entity.This component checks if the `scalar` attribute exists on the `template` object. If `scalar` is undefined,the component returns `null` and renders nothing. Otherwise, it displays a placeholder messageand a JSON representation of the `scalar` attribute.
+    A component for displaying the `scalar` attribute of an template entity.
+
+This component checks if the `scalar` attribute exists on the `template` object. If `scalar` is undefined,
+the component returns `null` and renders nothing. Otherwise, it displays a placeholder message
+and a JSON representation of the `scalar` attribute.
 </div>
 
 
@@ -1399,7 +1583,10 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>// Example usage:const templateEntity = { scalar: { id: 1, name: "Sample Scalar" } };&lt;TemplateScalarAttribute template={templateEntity} /></code></pre>
+    <pre class="prettyprint"><code>// Example usage:
+const templateEntity = { scalar: { id: 1, name: "Sample Scalar" } };
+
+&lt;TemplateScalarAttribute template={templateEntity} /></code></pre>
 
 
 
@@ -1411,7 +1598,14 @@
 
 
 <div class="description">
-    A lazy-loading component for displaying filtered `scalar` from a `template` entity.This component uses the `TemplateScalarAttributeAsyncAction` to asynchronously fetchthe `template.scalar` data. It shows a loading spinner while fetching, handles errors,and filters the resulting list using a custom `filter` function (defaults to `Boolean` to remove falsy values).Each vector item is rendered as a `<div>` with its `id` as both the `key` and the `id` attribute,and displays a formatted JSON preview using `<pre>`.
+    A lazy-loading component for displaying filtered `scalar` from a `template` entity.
+
+This component uses the `TemplateScalarAttributeAsyncAction` to asynchronously fetch
+the `template.scalar` data. It shows a loading spinner while fetching, handles errors,
+and filters the resulting list using a custom `filter` function (defaults to `Boolean` to remove falsy values).
+
+Each vector item is rendered as a `<div>` with its `id` as both the `key` and the `id` attribute,
+and displays a formatted JSON preview using `<pre>`.
 </div>
 
 
@@ -1468,7 +1662,10 @@
     
     <pre class="prettyprint"><code>&lt;TemplateScalarAttributeLazy template={{ id: "abc123" }} /></code></pre>
 
-    <pre class="prettyprint"><code>&lt;TemplateScalarAttributeLazy  template={{ id: "abc123" }}  filter={(v) => v.status === "active"}/></code></pre>
+    <pre class="prettyprint"><code>&lt;TemplateScalarAttributeLazy
+  template={{ id: "abc123" }}
+  filter={(v) => v.status === "active"}
+/></code></pre>
 
 
 
@@ -1480,7 +1677,15 @@
 
 
 <div class="description">
-    Component to render the filtered `vectors` attribute of a template entity.Applies an optional filter function to the vectors array before rendering.Supports infinite scrolling to load more items lazily.The `Layout` prop is used as a wrapper component for each rendered item andis consistently applied in both static and infinite scroll rendering modes.If different layouts are desired for infinite vs static modes,consider conditionally passing different `Layout` props.
+    Component to render the filtered `vectors` attribute of a template entity.
+
+Applies an optional filter function to the vectors array before rendering.
+Supports infinite scrolling to load more items lazily.
+
+The `Layout` prop is used as a wrapper component for each rendered item and
+is consistently applied in both static and infinite scroll rendering modes.
+If different layouts are desired for infinite vs static modes,
+consider conditionally passing different `Layout` props.
 </div>
 
 
@@ -1535,7 +1740,13 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>&lt;TemplateVectorsAttribute  template={template}  Visualiser={VectorMediumCard}  Layout={Col}  filter={(v) => v.active}  infinite={true}/></code></pre>
+    <pre class="prettyprint"><code>&lt;TemplateVectorsAttribute
+  template={template}
+  Visualiser={VectorMediumCard}
+  Layout={Col}
+  filter={(v) => v.active}
+  infinite={true}
+/></code></pre>
 
 
 
@@ -1547,7 +1758,11 @@
 
 
 <div class="description">
-    Infinite-scrolling component for the `vectors` attribute of a template entity.Uses the generic `InfiniteScroll` component to fetch, merge, and display the `vectors` arrayassociated with the provided `template` object. It utilizes `VectorsVisualiser` for rendering,and handles pagination, lazy-loading, and merging of items as the user scrolls.
+    Infinite-scrolling component for the `vectors` attribute of a template entity.
+
+Uses the generic `InfiniteScroll` component to fetch, merge, and display the `vectors` array
+associated with the provided `template` object. It utilizes `VectorsVisualiser` for rendering,
+and handles pagination, lazy-loading, and merging of items as the user scrolls.
 </div>
 
 
@@ -1602,7 +1817,14 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>&lt;TemplateVectorsAttributeInfinite  template={{    vectors: [      { id: 1, name: "Vector 1" },      { id: 2, name: "Vector 2" }    ]  }}/></code></pre>
+    <pre class="prettyprint"><code>&lt;TemplateVectorsAttributeInfinite
+  template={{
+    vectors: [
+      { id: 1, name: "Vector 1" },
+      { id: 2, name: "Vector 2" }
+    ]
+  }}
+/></code></pre>
 
 
 
@@ -1614,7 +1836,14 @@
 
 
 <div class="description">
-    A lazy-loading component for displaying filtered `vectors` from a `template` entity.This component uses the `TemplateVectorsAttributeAsyncAction` to asynchronously fetchthe `template.vectors` data. It shows a loading spinner while fetching, handles errors,and filters the resulting list using a custom `filter` function (defaults to `Boolean` to remove falsy values).Each vector item is rendered as a `<div>` with its `id` as both the `key` and the `id` attribute,and displays a formatted JSON preview using `<pre>`.
+    A lazy-loading component for displaying filtered `vectors` from a `template` entity.
+
+This component uses the `TemplateVectorsAttributeAsyncAction` to asynchronously fetch
+the `template.vectors` data. It shows a loading spinner while fetching, handles errors,
+and filters the resulting list using a custom `filter` function (defaults to `Boolean` to remove falsy values).
+
+Each vector item is rendered as a `<div>` with its `id` as both the `key` and the `id` attribute,
+and displays a formatted JSON preview using `<pre>`.
 </div>
 
 
@@ -1671,7 +1900,10 @@
     
     <pre class="prettyprint"><code>&lt;TemplateVectorsAttributeLazy template={{ id: "abc123" }} /></code></pre>
 
-    <pre class="prettyprint"><code>&lt;TemplateVectorsAttributeLazy  template={{ id: "abc123" }}  filter={(v) => v.status === "active"}/></code></pre>
+    <pre class="prettyprint"><code>&lt;TemplateVectorsAttributeLazy
+  template={{ id: "abc123" }}
+  filter={(v) => v.status === "active"}
+/></code></pre>
 
 
 
@@ -1683,7 +1915,11 @@
 
 
 <div class="description">
-    A component for displaying the `vectors` attribute of a template entity.This component checks if the `vectors` attribute exists on the `template` object. If `vectors` is undefined,the component returns `null` and renders nothing. Otherwise, it maps over the (optionally filtered) `vectors` arrayand displays a placeholder message and a JSON representation for each item.
+    A component for displaying the `vectors` attribute of a template entity.
+
+This component checks if the `vectors` attribute exists on the `template` object. If `vectors` is undefined,
+the component returns `null` and renders nothing. Otherwise, it maps over the (optionally filtered) `vectors` array
+and displays a placeholder message and a JSON representation for each item.
 </div>
 
 
@@ -1738,9 +1974,20 @@
 
     <h5>Examples</h5>
     
-    <pre class="prettyprint"><code>// Basic usage:const templateEntity = {   vectors: [    { id: 1, name: "Vector Item 1" },     { id: 2, name: "Vector Item 2" }  ] };&lt;TemplateVectorsAttribute template={templateEntity} /></code></pre>
+    <pre class="prettyprint"><code>// Basic usage:
+const templateEntity = { 
+  vectors: [
+    { id: 1, name: "Vector Item 1" }, 
+    { id: 2, name: "Vector Item 2" }
+  ] 
+};
+&lt;TemplateVectorsAttribute template={templateEntity} /></code></pre>
 
-    <pre class="prettyprint"><code>// With a custom filter:&lt;TemplateVectorsAttribute   template={templateEntity}  filter={vector => vector.name.includes("1")}/></code></pre>
+    <pre class="prettyprint"><code>// With a custom filter:
+&lt;TemplateVectorsAttribute 
+  template={templateEntity}
+  filter={vector => vector.name.includes("1")}
+/></code></pre>
 
 
 
@@ -1752,7 +1999,11 @@
 
 
 <div class="description">
-    “Page-level” update workflow (inline edit / celá stránka editace).Wrapper nad `BaseUpdateBody`. Typicky vykreslí editovatelný obsah (`DefaultContent`)a zajistí uložení přes `mutationAsyncAction` (dle Base/General implementace).Aplikuje RBAC přes `permissions`.
+    “Page-level” update workflow (inline edit / celá stránka editace).
+
+Wrapper nad `BaseUpdateBody`. Typicky vykreslí editovatelný obsah (`DefaultContent`)
+a zajistí uložení přes `mutationAsyncAction` (dle Base/General implementace).
+Aplikuje RBAC přes `permissions`.
 </div>
 
 
@@ -1814,7 +2065,10 @@
 
 
 <div class="description">
-    Tlačítko, které otevře update dialog a provede uložení.Wrapper nad `BaseUpdateButton`. Dodává výchozí `DefaultContent`, výchozí `Dialog`,a výchozí `mutationAsyncAction`. Aplikuje RBAC přes `permissions`.
+    Tlačítko, které otevře update dialog a provede uložení.
+
+Wrapper nad `BaseUpdateButton`. Dodává výchozí `DefaultContent`, výchozí `Dialog`,
+a výchozí `mutationAsyncAction`. Aplikuje RBAC přes `permissions`.
 </div>
 
 
@@ -1876,7 +2130,11 @@
 
 
 <div class="description">
-    Dialog pro editaci entity.Wrapper nad `BaseUpdateDialog`. Dodává výchozí editovatelný obsah (`DefaultContent`)a výchozí mutační akci (`mutationAsyncAction`) pro uložení změn. Aplikuje RBACpřes `permissions`.
+    Dialog pro editaci entity.
+
+Wrapper nad `BaseUpdateDialog`. Dodává výchozí editovatelný obsah (`DefaultContent`)
+a výchozí mutační akci (`mutationAsyncAction`) pro uložení změn. Aplikuje RBAC
+přes `permissions`.
 </div>
 
 
@@ -1938,7 +2196,10 @@
 
 
 <div class="description">
-    Link na update stránku / update route pro konkrétní entitu.Wrapper nad `BaseUpdateLink`. Nastavuje výchozí `uriPattern` a aplikuje RBACpřes `permissions`. Vše ostatní přeposílá do Base komponenty.
+    Link na update stránku / update route pro konkrétní entitu.
+
+Wrapper nad `BaseUpdateLink`. Nastavuje výchozí `uriPattern` a aplikuje RBAC
+přes `permissions`. Vše ostatní přeposílá do Base komponenty.
 </div>
 
 
@@ -2012,7 +2273,10 @@
 
 
 <div class="description">
-    A React component that renders a `ProxyLink` to an "template" entity's view page.The target URL is dynamically constructed using the `template` object's `id`, and the link displaysthe `template` object's `name` as its clickable content.
+    A React component that renders a `ProxyLink` to an "template" entity's view page.
+
+The target URL is dynamically constructed using the `template` object's `id`, and the link displays
+the `template` object's `name` as its clickable content.
 </div>
 
 
@@ -2289,7 +2553,11 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>// Example usage with a sample template entity:const templateEntity = { id: 123, name: "Example Template Entity" };&lt;TemplateLink template={templateEntity} />// Renders: &lt;ProxyLink to="/template/template/view/123">Example Template Entity&lt;/ProxyLink></code></pre>
+    <pre class="prettyprint"><code>// Example usage with a sample template entity:
+const templateEntity = { id: 123, name: "Example Template Entity" };
+
+&lt;TemplateLink template={templateEntity} />
+// Renders: &lt;ProxyLink to="/template/template/view/123">Example Template Entity&lt;/ProxyLink></code></pre>
 
 
 
@@ -2307,7 +2575,10 @@
 
 
 <div class="description">
-    Visualiser component for displaying a list of vector items using `TemplateVectorsAttribute`.Wraps the `TemplateVectorsAttribute` component, passing the given `items` as the `vectors` attributeon a synthetic `template` object. All other props are forwarded.
+    Visualiser component for displaying a list of vector items using `TemplateVectorsAttribute`.
+
+Wraps the `TemplateVectorsAttribute` component, passing the given `items` as the `vectors` attribute
+on a synthetic `template` object. All other props are forwarded.
 </div>
 
 
@@ -2550,7 +2821,13 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>&lt;VectorsVisualiser  items={[    { id: 1, name: "Vector 1" },    { id: 2, name: "Vector 2" }  ]}  filter={v => v.name.includes("1")}/></code></pre>
+    <pre class="prettyprint"><code>&lt;VectorsVisualiser
+  items={[
+    { id: 1, name: "Vector 1" },
+    { id: 2, name: "Vector 2" }
+  ]}
+  filter={v => v.name.includes("1")}
+/></code></pre>
 
 
 
@@ -3125,7 +3402,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Sun Jul 26 2026 21:20:55 GMT+0200 (středoevropský letní čas)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Mon Jul 27 2026 15:59:35 GMT+0200 (Central European Summer Time)
 </footer>
 
 <script> prettyPrint(); </script>
